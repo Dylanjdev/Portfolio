@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes spin-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes spin-reverse-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 25s linear infinite;
+  }
+
+  .animate-spin-reverse-slow {
+    animation: spin-reverse-slow 25s linear infinite;
+  }
+}
+
+
+
+:root {
+  --bg-dark: #0b1020;
+  --card: rgba(255, 255, 255, 0.03);
+}
+
+body {
+  @apply bg-[var(--bg-dark)] text-slate-200 antialiased;
+  background-image: radial-gradient(circle at 10% 10%, rgba(58,141,255,0.02), transparent 20%),
+                    radial-gradient(circle at 90% 90%, rgba(168,85,247,0.02), transparent 20%);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glow {
+  box-shadow: 0 6px 24px rgba(0,229,255,0.08), 0 0 16px rgba(168,85,247,0.04);
+}
+
+.container {
+  @apply max-w-5xl mx-auto px-6;
+}
