@@ -11,7 +11,7 @@ import ParticleBackground from "./components/ParticleBackground"; // 👈 add th
 export default function App() {
   return (
     <div className="relative min-h-screen text-slate-200 overflow-hidden">
-      {/* 🌌 Particle Background Layer */}
+      {/* 🌌 Particle Background Layer lines */}
       <div className="absolute inset-0 -z-10">
         <ParticleBackground />
       </div>
