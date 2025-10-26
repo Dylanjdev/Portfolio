@@ -45,7 +45,7 @@ export default function Contact() {
               exit={{ opacity: 0, y: -10 }}
               className="bg-green-500 text-white p-4 rounded mb-6 text-center font-medium"
             >
-              Thank you! Your message has been sent.
+              Thank you!! Your message has been sent.
             </motion.div>
           )}
         </AnimatePresence>
@@ -68,7 +68,6 @@ export default function Contact() {
             type="email"
             name="email"
             placeholder="Your Email"
-            defaultValue="dylanjsmith.dev@gmail.com"
             autoComplete="email"
             required
             className="bg-[var(--card)] text-slate-200 px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-accent transition"
