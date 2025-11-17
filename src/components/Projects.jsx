@@ -30,7 +30,7 @@ const projects = [
     tech: ["HTML5", "CSS3", "JavaScript", "Video BG"],
     github: "https://github.com/Dylanjdev/Gaming-Website",
     live: "https://dylanjdev.github.io/Gaming-Website/",
-    useIframe: true,
+    useIframe: true, 
   },
   {
     title: "🌐 Smith Digitals",
