@@ -400,6 +400,16 @@ header {
     animation: autoBlurAnimation linear both;
     animation-timeline: view();
 }
+
+/* Fallback for browsers that don't support animation-timeline (iOS Safari) */
+@supports not (animation-timeline: view()) {
+    .autoBlur {
+        animation: none;
+        filter: none;
+        opacity: 1;
+    }
+}
+
 @keyframes autoBlurAnimation {
     0% {
         filter: blur(40px);
@@ -421,6 +431,13 @@ header {
     animation: autoTakeFullAnimation linear both;
     animation-timeline: view(70% 65%);
 }
+
+@supports not (animation-timeline: view()) {
+    .autoTakeFull {
+        animation: none;
+    }
+}
+
 @keyframes autoTakeFullAnimation {
     to {
        width: 100%;
@@ -435,6 +452,14 @@ header {
     animation: autoDisplayAnimation linear both;
     animation-timeline: view(70% 5%);
 }
+
+@supports not (animation-timeline: view()) {
+    .autoDisplay {
+        animation: none;
+        opacity: 1;
+    }
+}
+
 @keyframes autoDisplayAnimation {
     from {
         opacity: 0;
