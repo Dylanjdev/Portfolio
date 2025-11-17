@@ -10,7 +10,7 @@ import SmithDigitalsImg from "../assets/smithlogo.png";
 const projects = [
   {
     title: "MCGUIREs lawn and gardening.",
-    desc: "A responsive, user-friendly website for McGuire’s Lawn & Landscaping. Emphasizes visual storytelling with full-width images, clear service descriptions, and intuitive navigation.",
+    desc: "A responsive, user-friendly website for McGuire's Lawn & Landscaping. Emphasizes visual storytelling with full-width images, clear service descriptions, and intuitive navigation.",
     tech: ["React", "Vite"],
     github: "https://github.com/Dylanjdev/McGures-Lawn-Landscaping",
     live: "https://mcguireslawnandlandscaping.com/",
@@ -23,6 +23,14 @@ const projects = [
     github: "https://github.com/Dylanjdev/Robofriends-React-v19-Vite-",
     live: "https://dylanjdev.github.io/Robofriends-React-v19-Vite-/",
     image: RoboFriendsImg,
+  },
+  {
+    title: "🎮 Gaming Website",
+    desc: "Modern gaming website featuring dynamic video background, smooth animations, and engaging UI. Built with pure HTML, CSS, and JavaScript to showcase front-end fundamentals.",
+    tech: ["HTML5", "CSS3", "JavaScript", "Video BG"],
+    github: "https://github.com/Dylanjdev/Gaming-Website",
+    live: "https://dylanjdev.github.io/Gaming-Website/",
+    useIframe: true,
   },
   {
     title: "🌐 Smith Digitals",
@@ -54,17 +62,26 @@ export default function Projects() {
             transition={{ type: "spring", stiffness: 200 }}
             className="glass glow rounded-xl p-4 flex flex-col justify-between shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            {/* Project image */}
+            {/* Project image or iframe */}
             <div className="overflow-hidden rounded-xl mb-4">
-              <img
-                src={p.image}
-                alt={p.title}
-                className="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-              />
+              {p.useIframe ? (
+                <iframe
+                  src={p.live}
+                  title={p.title}
+                  className="w-full h-80 rounded-lg border-0 pointer-events-none"
+                  loading="lazy"
+                />
+              ) : (
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                />
+              )}
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
+              <h3 className="text-xl font-semibold mb-2 break-words">{p.title}</h3>
               <p className="text-slate-400 text-sm mb-4">{p.desc}</p>
               <div className="flex gap-2 flex-wrap mb-4">
                 {p.tech.map((t, i) => (
