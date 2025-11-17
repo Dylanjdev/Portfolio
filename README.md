@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dylan J. Smith Portfolio
 
 Welcome to my personal portfolio! This site showcases my projects, skills, and background as I transition from an electrical career into web development. Built with **React**, **Vite**, **Tailwind CSS**, and **Framer Motion**, the portfolio is fully responsive and interactive.
@@ -36,3 +37,8 @@ This portfolio is deployed on **GitHub Pages**.
 To deploy locally or update:  
 
 ```bash
+=======
+# Gaming-Website
+# Gaming-Website
+https://dylanjdev.github.io/Gaming-Website/
+>>>>>>> 5262acdcc4f4e98c3eba330d801df3eacf52ed72
