@@ -4,18 +4,21 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function About() {
   const [expanded, setExpanded] = useState(false);
 
-  const summary = "I’m a web developer transitioning from electrical work to build a better life for my fiancée and our 3-month-old baby.";
+  const summary = "I'm a web developer and founder of Smith Digitals, passionate about building modern web applications that solve real problems.";
   
   const fullText = (
     <>
       <p className="mb-4 leading-relaxed">
-        I started my professional journey in electrical work, where I learned discipline, problem-solving, and precision. These skills now help me approach coding projects efficiently.
+        I specialize in front-end development with React, JavaScript (ES6+), and modern web technologies. My focus is on creating responsive, accessible, and performance-optimized applications that deliver exceptional user experiences.
       </p>
       <p className="mb-4 leading-relaxed">
-        I decided to transition into web development to create a better life for my family. I focus on building modern, responsive websites using React, JavaScript, and related technologies.
+        As the founder of <span className="text-accent font-semibold">Smith Digitals</span>, I help businesses establish their online presence through custom web solutions. I work with clients from initial concept to deployment, ensuring every project meets modern web standards and drives results.
+      </p>
+      <p className="mb-4 leading-relaxed">
+        My development approach emphasizes clean code, component-based architecture, and best practices in SEO, accessibility (WCAG/ARIA), and Core Web Vitals. I'm experienced with React, Vite, Node.js, Git workflows, and modern tooling.
       </p>
       <p className="leading-relaxed">
-        My goal is to continue learning, tackling challenging projects, and contributing to solutions that make a difference.
+        I'm driven by continuous learning and tackling challenging projects. Whether it's building dynamic web apps, optimizing performance, or creating design systems, I'm committed to delivering quality solutions that make an impact.
       </p>
     </>
   );
