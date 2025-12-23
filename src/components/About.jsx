@@ -4,21 +4,21 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function About() {
   const [expanded, setExpanded] = useState(false);
 
-  const summary = "I'm a web developer and founder of Smith Digitals, passionate about building modern web applications that solve real problems.";
+  const summary = "I’m a web developer transitioning from electrical work to build a better life for my fiancée and our 3-month-old baby.";
   
   const fullText = (
     <>
       <p className="mb-4 leading-relaxed">
-        I specialize in front-end development with React, JavaScript (ES6+), and modern web technologies. My focus is on creating responsive, accessible, and performance-optimized applications that deliver exceptional user experiences.
+        I started my professional journey in electrical work, where I learned discipline, problem-solving, and precision. These skills now help me approach coding projects efficiently.
       </p>
       <p className="mb-4 leading-relaxed">
-        As the founder of <span className="text-accent font-semibold">Smith Digitals</span>, I help businesses establish their online presence through custom web solutions. I work with clients from initial concept to deployment, ensuring every project meets modern web standards and drives results.
+        I decided to transition into web development to create a better life for my family. This journey led me to found <span className="text-accent font-semibold">Smith Digitals</span>, a web development agency dedicated to helping businesses establish their online presence with modern, responsive websites.
       </p>
       <p className="mb-4 leading-relaxed">
-        My development approach emphasizes clean code, component-based architecture, and best practices in SEO, accessibility (WCAG/ARIA), and Core Web Vitals. I'm experienced with React, Vite, Node.js, Git workflows, and modern tooling.
+        At Smith Digitals, I focus on building custom solutions using React, JavaScript, and cutting-edge web technologies, delivering fast and creative experiences tailored to each client's needs.
       </p>
       <p className="leading-relaxed">
-        I'm driven by continuous learning and tackling challenging projects. Whether it's building dynamic web apps, optimizing performance, or creating design systems, I'm committed to delivering quality solutions that make an impact.
+        My goal is to continue learning, tackling challenging projects, and contributing to solutions that make a difference for businesses and their customers.
       </p>
     </>
   );

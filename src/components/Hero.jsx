@@ -2,6 +2,20 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
+  const handleSmoothScroll = (e, targetId) => {
+    e.preventDefault();
+    const element = document.querySelector(targetId);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <section id="hero" className="flex flex-col justify-center items-center h-screen text-center">
       <motion.h1
@@ -57,10 +71,10 @@ export default function Hero() {
       </motion.div>
 
       <div className="mt-8 flex gap-4">
-        <a href="#projects" className="px-5 py-2 glass rounded-lg hover:bg-accent hover:text-black transition">
+        <a href="#projects" onClick={(e) => handleSmoothScroll(e, "#projects")} className="px-5 py-2 glass rounded-lg hover:bg-accent hover:text-black transition">
           View Projects
         </a>
-        <a href="#contact" className="px-5 py-2 border border-accent rounded-lg hover:bg-accent hover:text-black transition">
+        <a href="#contact" onClick={(e) => handleSmoothScroll(e, "#contact")} className="px-5 py-2 border border-accent rounded-lg hover:bg-accent hover:text-black transition">
           Contact Me
         </a>
       </div>
